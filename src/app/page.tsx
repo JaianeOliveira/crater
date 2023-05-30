@@ -19,13 +19,12 @@ export default function Home() {
 				{},
 				{ params: { url: longURL?.current?.value } }
 			);
-			console.log(data);
 
 			if (data.status === 201) {
 				setShortURL(data.data['short_url']);
 			}
 		} catch (error) {
-			console.log(error);
+			console.error(error);
 		} finally {
 			setIsLoading(false);
 		}
