@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+	env: {
+		apiURL: 'https://crater.up.railway.app',
+	},
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
