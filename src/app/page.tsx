@@ -53,7 +53,7 @@ export default function Home() {
 					onSubmit={getShortURL}
 					id="shortener-form"
 					name="shortener-form"
-					className="bg-indigo-950 rounded-full w-full lg:w-[50vw] lg:max-w-[92vw] px-2 py-2 flex gap-2 flex-col justify-between items-center lg:flex-row lg:items-stretch lg:justify-between my-8"
+					className="bg-indigo-950 rounded-3xl lg:rounded-full w-full lg:w-[50vw] lg:max-w-[92vw] px-2 py-2 flex gap-2 flex-col justify-between items-center lg:flex-row lg:items-stretch lg:justify-between my-8"
 				>
 					<input
 						autoComplete="off"
