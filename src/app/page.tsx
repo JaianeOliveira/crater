@@ -1,5 +1,6 @@
 'use client';
 import { api } from '@/services/axios';
+import Link from 'next/link';
 import { FormEvent, useRef, useState } from 'react';
 
 export default function Home() {
@@ -39,12 +40,12 @@ export default function Home() {
 	};
 
 	return (
-		<main className="bg-gradient-to-r from-indigo-400 to-indigo-700">
-			<section className="px-[8vw] py-8 h-[92vh] flex flex-col items-center justify-center">
-				<h1 className="text-slate-100 text-4xl font-bold text-shadow-md">
-					Crater
+		<main className="bg-gradient-to-r from-indigo-950 to-zinc-950">
+			<section className="px-[8vw] py-8 h-[92vh] flex gap-2 flex-col items-center justify-center">
+				<h1 className="text-zinc-100 text-4xl font-light uppercase text-shadow-md shadow-zinc-50">
+					Izar
 				</h1>
-				<h2 className="text-slate-200 font-semibold text-sm">
+				<h2 className="text-slate-200 font-light text-sm">
 					Encurtador de URLs
 				</h2>
 
@@ -52,19 +53,20 @@ export default function Home() {
 					onSubmit={getShortURL}
 					id="shortener-form"
 					name="shortener-form"
-					className="bg-indigo-100 rounded w-full lg:w-[50vw] lg:max-w-[92vw] px-2 py-2 flex gap-2 flex-col justify-between items-center lg:flex-row lg:items-stretch lg:justify-between my-8"
+					className="bg-indigo-950 rounded-full w-full lg:w-[50vw] lg:max-w-[92vw] px-2 py-2 flex gap-2 flex-col justify-between items-center lg:flex-row lg:items-stretch lg:justify-between my-8"
 				>
 					<input
+						autoComplete="off"
 						ref={longURL}
 						type="url"
 						placeholder="Ex.: https://open.spotify.com/playlist/6PzHcrD8tACyQqF5l6RBFK?si=cd30145e559d4e6e"
 						name="long-url"
-						className="bg-transparent h-full w-full p-2 focus:outline-none placeholder:text-indigo-800/30 placeholder:font-semibold placeholder:text-sm text-sm text-indigo-800 font-semibold"
+						className="bg-transparent h-full w-full p-2 pl-3 focus:outline-none placeholder:text-indigo-700/30 placeholder:font-semibold placeholder:text-sm text-sm text-indigo-200 font-semibold"
 					/>
 					<button
 						disabled={isLoading}
 						type="submit"
-						className="text-indigo-100 bg-indigo-700 py-2 px-4 text-sm rounded font-semibold w-full lg:w-1/6 flex items-center justify-center h-full"
+						className="text-indigo-100 bg-indigo-700 py-2 px-4 text-sm rounded-full font-medium w-full lg:w-1/6 flex items-center justify-center h-full"
 					>
 						{isLoading ? (
 							<span className="relative flex h-3 w-3">
@@ -78,7 +80,7 @@ export default function Home() {
 				</form>
 				<div
 					onClick={copyToClipboard}
-					className={` p-4 opacity-0 translate-y-0 bg-indigo-300/30 rounded w-full overflow-hidden lg:w-[20vw] lg:max-w-[92vw] flex items-center justify-center transition-all ease-in-out duration-400   ${
+					className={` p-4 opacity-0 translate-y-0 bg-indigo-950/40 rounded-full w-full overflow-hidden lg:w-[20vw] lg:max-w-[92vw] flex items-center justify-center transition-all ease-in-out duration-400   ${
 						shortURL &&
 						'opacity-100 translate-y-4 cursor-copy hover:scale-105 bg-indigo-300/40 '
 					}`}
@@ -102,12 +104,14 @@ export default function Home() {
 						className="px-4 py-2 bg-indigo-600/70 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
 						role="alert"
 					>
-						<span className="text-sm font-semibold">Copiado</span>
+						<span className="text-sm font-medium">Copiado</span>
 					</div>
 				</div>
 			</section>
-			<footer className="flex items-end justify-center h-[8vh] w-full p-4 text-xs text-indigo-300">
-				&copy; Jaiane Oliveira, 2023
+			<footer className="flex items-end justify-center h-[8vh] w-full p-4 text-xs text-indigo-300/30">
+				&copy;{' '}
+				<Link href="https://github.com/jaianeoliveira">Jaiane Oliveira</Link>,
+				2023
 			</footer>
 		</main>
 	);

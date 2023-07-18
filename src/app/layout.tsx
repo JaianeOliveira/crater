@@ -4,7 +4,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-	title: 'Crater - Encurtador de URLs',
+	title: 'Izar	 - Encurtador de URLs',
 	description: 'Encurtador de URLs',
 };
 
