@@ -5,7 +5,7 @@ import { FormEvent, useRef, useState } from 'react';
 export default function Home() {
 	const longURL = useRef<HTMLInputElement>(null);
 	const shortURLExample = 'crater.up.railway.app/VHmtto';
-	const [shortURL, setShortURL] = useState(null);
+	const [shortURL, setShortURL] = useState<string>();
 	const [isLoading, setIsLoading] = useState(false);
 	const [showAlert, setShowAlert] = useState(false);
 
@@ -21,7 +21,7 @@ export default function Home() {
 			);
 
 			if (data.status === 201) {
-				setShortURL(data.data['short_url']);
+				setShortURL(`${window.location.href}${data.data['id']}`);
 			}
 		} catch (error) {
 			console.error(error);
