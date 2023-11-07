@@ -4,7 +4,7 @@
 ![GitHub](https://img.shields.io/github/license/jaianeoliveira/crater)
 [![Linkedin Badge](https://img.shields.io/badge/-Testar-66179D?labelColor=66179D&link=https://crater-xi.vercel.app/)](https://crater-xi.vercel.app/) 
 
-![scrnli_18_07_2023_15-24-45](https://github.com/JaianeOliveira/crater/assets/82323559/9455fb65-814c-416a-9863-a5d1baf49129)
+![banner](https://github.com/JaianeOliveira/crater/assets/82323559/9455fb65-814c-416a-9863-a5d1baf49129)
 
 ### 🔑 License
 [MIT](https://github.com/JaianeOliveira/crater/blob/main/LICENSE)
